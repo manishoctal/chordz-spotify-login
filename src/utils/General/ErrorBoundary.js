@@ -6,6 +6,7 @@ export default function ErrorBoundary(props) {
   const { children, displayError, handleType, handleTime, fallBack, redirectLocation } = props;
   try {
     return <>{children}</>;
+    
   } catch (e) {
     if (!displayError) {
       e = {};
