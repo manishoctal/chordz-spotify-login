@@ -41,16 +41,18 @@ export default function Callback() {
 
     useEffect(login, [urlParams.get('code')])
     useEffect(() => {
-      
-            if (auth?.token||urlParams.get('access_token')) {
-                spotifyGet('/me',auth?.token|| urlParams.get('access_token')).then(res => {
-                    setProfile(res)
-                })
-            }
-        
+
+        if (auth?.token || urlParams.get('access_token')) {
+            spotifyGet('/me', auth?.token || urlParams.get('access_token')).then(res => {
+                setProfile(res)
+            })
+        }
+
     }, [urlParams.get('access_token'), auth])
 
 
+
+    console.log('dddddd',profile)
 
     return (<></>)
 }

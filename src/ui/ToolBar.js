@@ -23,6 +23,18 @@ const Layout = (props) => {
         setAnchorElUser(event.currentTarget);
     };
 
+    useEffect(() => {
+        if (!profile) {
+            login()
+
+
+        }
+
+    }, [profile])
+
+
+    console.log('profile',profile)
+
 
 
     return (
@@ -30,7 +42,7 @@ const Layout = (props) => {
             <Container maxWidth={false} sx={{ backgroundColor: 'white' }}>
                 <Toolbar disableGutters >
 
-                    <Box sx={{ flexGrow: 1 }} >
+                    {/* <Box sx={{ flexGrow: 1 }} >
                         {profile ?
 
 
@@ -60,7 +72,7 @@ const Layout = (props) => {
 
                                     <button
 
-                                        onClick={() =>  {window.location='/'}}
+                                        onClick={() => { window.location = '/' }}
                                         key={pages.length + 1}
                                         variant='text'
                                         style={{ color: "white", backgroundColor: 'blue', border: 'none', padding: '10px 30px', borderRadius: '10px', cursor: 'pointer' }}
@@ -90,7 +102,7 @@ const Layout = (props) => {
                                 </button>
                             </Box>
                         }
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar >
