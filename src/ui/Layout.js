@@ -6,7 +6,7 @@ import ErrorBoundary from '../utils/General/ErrorBoundary'
 export default function Layout() {
     return (
         <>
-            <Toolbar/>
+           
             <ErrorBoundary>
                 <PageRoutes/>
             </ErrorBoundary>
