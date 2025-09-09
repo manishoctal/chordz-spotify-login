@@ -17,7 +17,7 @@ const pages = ['home', 'playlists', 'search', 'profile'];
 
 const Layout = (props) => {
     const { logout, children } = props
-    const login = () => loginAuthorizationCodeFlow(['user-modify-playback-state user-read-currently-playing user-read-playback-state user-read-private user-read-email'])
+    const login = () => loginAuthorizationCodeFlow(['user-modify-playback-state user-read-currently-playing user-read-playback-state user-read-private user-read-email','playlist-read-private','user-library-read'])
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [profile] = useContext(AuthContext);
     const handleOpenUserMenu = (event) => {
